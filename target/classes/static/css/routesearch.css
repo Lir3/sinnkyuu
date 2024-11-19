@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/* 全体のリセット */
+* {
+ 	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+}
+
+body {
+ 	font-family: Arial, sans-serif;
+ 	background-color: #98fb98;
+ 	display: flex;
+ 	flex-direction: column; 
+ 	justify-content: center;
+ 	align-items: center;
+ 	height: auto;
+}
+
+table{
+	background-color: #fff;
+}
+
+#startpracebox{
+	padding: 5px;
+}
+
+#arrivalpracebox{
+	padding: 5px;
+}
+
+.example1{
+    display: flex;
+/*	justify-content: center;*/
+}
+
+#replacement{
+/*	背景色を無色に */
+  	background: transparent;
+/*  枠線を消す */
+  	border: none;
+/*  クリックした際に枠線をnone消す */
+  	outline: none;
+/*  影を消す */
+  	box-shadow: none;
+  	font-size: 100%;
+	height: 40px;
+  	width: 50px;
+}
+
+.example2{
+    display: flex;
+	justify-content: center;
+}
+#timeselect {
+	font-size: 16px;
+	color: #000000;
+	background-color: #ffffff;
+	padding: 3px 24px;
+}
+
+.example3{
+	text-align: center;
+}
+
+#conditionsselect {
+	font-size: 16px;
+	color: #000000;
+	background-color: #ffffff;
+	padding: 3px 24px;
+}
+
+#search {
+	font-size: 16px;
+	color: #000000;
+	background-color: #ffffff;
+	padding: 4px 24px;
+}
+
+#commuterpass{
+	font-size: 16px;
+	color: #000000;
+	background-color: #ffffff;
+	padding: 3px 24px;
+}
+
+#map {
+	font-size: 16px;
+	color: #000000;
+	background-color: #ffffff;
+	padding: 3px 24px;
+}
+
+#login {
+	font-size: 16px;
+	color: #000000;
+	background-color: #ffffff;
+	padding: 3px 24px;
+}
+
+h1{
+	text-align: center;
+}
