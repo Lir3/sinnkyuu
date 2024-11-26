@@ -2,56 +2,56 @@
 
 /* 全体のリセット */
 * {
- 	margin: 0;
- 	padding: 0;
- 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
- 	font-family: Arial, sans-serif;
- 	background-color: #98fb98;
- 	display: flex;
- 	flex-direction: column; 
- 	justify-content: center;
- 	align-items: center;
- 	height: auto;
-}
-
-table{
-	background-color: #fff;
-}
-
-#startpracebox{
-	padding: 5px;
-}
-
-#arrivalpracebox{
-	padding: 5px;
-}
-
-.example1{
-    display: flex;
-/*	justify-content: center;*/
-}
-
-#replacement{
-/*	背景色を無色に */
-  	background: transparent;
-/*  枠線を消す */
-  	border: none;
-/*  クリックした際に枠線をnone消す */
-  	outline: none;
-/*  影を消す */
-  	box-shadow: none;
-  	font-size: 100%;
-	height: 40px;
-  	width: 50px;
-}
-
-.example2{
-    display: flex;
+	font-family: Arial, sans-serif;
+	background-color: #98fb98;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	height: auto;
 }
+
+/*タイトル*/
+h1 {
+	text-align: center;
+}
+
+/*出発駅の入力欄*/
+#startpracebox {
+	padding: 5px;
+}
+
+/*到着駅の入力欄*/
+#arrivalpracebox {
+	padding: 5px;
+}
+
+/*出発駅と到着駅の文字を入れ替えるボタン*/
+.replacement_class {
+	display: flex;
+}
+#replacement {
+	background: transparent;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	font-size: 100%;
+	height: 40px;
+	width: 50px;
+}
+
+/*時間、条件指定をまとめる*/
+.conditions {
+	display: flex;
+}
+
+/*時間指定ボタン*/
 #timeselect {
 	font-size: 16px;
 	color: #000000;
@@ -59,10 +59,7 @@ table{
 	padding: 3px 24px;
 }
 
-.example3{
-	text-align: center;
-}
-
+/*条件等のボタン*/
 #conditionsselect {
 	font-size: 16px;
 	color: #000000;
@@ -70,6 +67,7 @@ table{
 	padding: 3px 24px;
 }
 
+/*検索ボタン*/
 #search {
 	font-size: 16px;
 	color: #000000;
@@ -77,13 +75,19 @@ table{
 	padding: 4px 24px;
 }
 
-#commuterpass{
+/*定期券運賃表示ボタン*/
+#commuterpass {
 	font-size: 16px;
 	color: #000000;
 	background-color: #ffffff;
 	padding: 3px 24px;
 }
+/*定期券運賃のテーブル*/
+table {
+	background-color: #fff;
+}
 
+/*地図表示ボタン*/
 #map {
 	font-size: 16px;
 	color: #000000;
@@ -91,6 +95,7 @@ table{
 	padding: 3px 24px;
 }
 
+/*ログインボタン*/
 #login {
 	font-size: 16px;
 	color: #000000;
@@ -98,6 +103,35 @@ table{
 	padding: 3px 24px;
 }
 
-h1{
+/*タブ要素*/
+.result_area {
+	width: 400px;
+	margin: auto;
+	flex-wrap: wrap;
+	display: flex;
+}
+.result_class {
+	width: calc(95%/4);
+	height: 40px;
+	background-color: darkgrey;
+	line-height: 40px;
+	font-size: 15px;
 	text-align: center;
+	display: block;
+	float: left;
+	order: -1;
+}
+input[name="result"] {
+	display: none;
+}
+input:checked+.result_class {
+	background-color: cadetblue;
+	color: aliceblue;
+}
+.content_class {
+	display: none;
+	width: 100%;
+}
+input:checked+.result_class+.content_class {
+	display: block;
 }

@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>ルート検索ページ</title>
-<link rel="stylesheet" href="css/routesearch.css">
+	<meta charset="UTF-8">
+	<title>ルート検索ページ</title>
+	<link rel="stylesheet" href="css/routesearch.css">
 
 </head>
+
 <body>
 	<div>
-	<h1>ルート検索</h1>
-	<p>出発地：<input type="text" id="startpracebox" size="40"></p>
-	<div class="example1">
-		<button id="replacement" onclick="swapText()">⇅</button>
+		<h1>ルート検索</h1>
+		<p>出発地：<input type="text" id="startpracebox" size="40"></p>
+		<div class="replacement_class">
+			<button id="replacement" onclick="swapText()">⇅</button>
+		</div>
+		<p>目的地：<input type="text" id="arrivalpracebox" size="40"></p>
+		<br>
+		<div class="conditions">
+			<button id="timeselect" style="width:190px;">時間指定</button>
+			<button id="conditionsselect" style="width:190px;">移動方法、条件</button>
+		</div>
+		<br>
+		<button id="search" style="width:380px;">検索</button>
+		<br>
+		<br>
+		<div class="result_area">
+			<input type="radio" name="result" id="route1" checked>
+			<label class="result_class" for="route1">経路1</label>
+			<div class="content_class">
+				<img src="../img/経路.png" style="width:380px;">
+			</div>
+			<input type="radio" name="result" id="route2">
+			<label class="result_class" for="route2">経路2</label>
+			<div class="content_class">
+				<img src="../img/経路.png" style="width:380px;">
+			</div>
+			<input type="radio" name="result" id="route3">
+			<label class="result_class" for="route3">経路3</label>
+			<div class="content_class">
+				<img src="../img/経路.png" style="width:380px;">
+			</div>
+			<input type="radio" name="result" id="route4">
+			<label class="result_class" for="route4">経路4</label>
+			<div class="content_class">
+				<img src="../img/経路.png" style="width:380px;">
+			</div>
+		</div>
+		<br>
+		<div>
+			<button id="commuterpass" style="width:380px;">定期券運賃を表示</button>
+			<div id="commuterElement" style="display: none;">
+				<table id="table4" border="1" name="table4">
+					<tr>
+						<th width="100">1ケ月</th>
+						<th width="260">30,000円</th>
+					</tr>
+					<tr>
+						<th width="100">2ケ月</th>
+						<th width="260">85,000円</th>
+					</tr>
+					<tr>
+						<th width="100">6ケ月</th>
+						<th width="260">170,000円</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div>
+			<input type="submit" id="map" value="地図で見る" style="width:380px;">
+		</div>
+		<div>
+			<input type="submit" id="login" value="ログイン　(社員向け)" onclick="location.href='campanylogin'"
+				style="width:380px;">
+		</div>
+		<br>
+	</div>
 
-	</div>
-	<p>目的地：<input type="text" id="arrivalpracebox" size="40"></p>
-	<br>
-	<div class="example2">
-		<input type="submit" id=timeselect value="時間指定" style="width:190px;">
-		<input type="submit" id=conditionsselect value="移動方法、条件" style="width:190px;">
-	</div>
-	<br>
-	<div class="example3">
-		<input type="submit" id=search value="検索" style="width:190px;">
-	</div>
-	<br>
-	<div>
-		<img src="img/経路一覧.png">
-	</div>
-	<br>
-	<div>
-		<button id="commuterpass" style="width:380px;">定期券運賃を表示</button>
-		<div id="commuterElement" style="display: none;">
-        	<table id="table1" border="1" name="table1">
-			<tr>
-				<th width="100">1ケ月</th>
-				<th width="260">30,000円</th>
-			</tr>
-			<tr>
-				<th width="100">2ケ月</th>
-				<th width="260">85,000円</th>
-			</tr>
-			<tr>
-				<th width="100">6ケ月</th>
-				<th width="260">170,000円</th>
-			</tr>
-		</table>
-    	</div>
-	</div>
-	<div>
-		<input type="submit" id="map" value="地図で見る" style="width:380px;">
-	</div>
-	<div>
-		<input type="submit" id="login" value="ログイン　(社員向け)" onclick="location.href='campanylogin'" style="width:380px;">
-	</div>
-	<br>
-	</div>
-	
-	</body>
-	<script src="js/routeserch.js"></script>
+</body>
+<script src="js/routeserch.js"></script>
+
 </html>
