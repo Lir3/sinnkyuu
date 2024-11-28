@@ -1,0 +1,90 @@
+/* 全体のリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #66cdaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-container {
+  background-color: #FFFFFF;
+  padding: 50px; /* パディングを増やして大きく */
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* 影を強調 */
+  width: 100%;
+  max-width: 500px; /* 最大幅を少し広く */
+  text-align: center;
+}
+h1 {
+  font-size: 28px; /* タイトルを少し大きく */
+  color: #333;
+  margin-bottom: 30px; /* 下の余白を増やす */
+}
+.login-input {
+  width: 100%;
+  padding: 15px; /* 入力フィールドのパディングを増やす */
+  margin: 15px 0; /* マージンを増やす */
+  border: 1px solid #ccc;
+  border-radius: 6px; /* 角を少し丸く */
+  font-size: 18px; /* フォントサイズを少し大きく */
+}
+.login-button {
+  width: 50%;
+  padding: 15px; /* ボタンのパディングを増やす */
+  background-color: #007BFF;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px; /* ボタンのフォントサイズを大きく */
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background-color 0.3s;
+}
+.login-button:hover {
+  background-color: #0056B3;
+}
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; /* フッターの余白を少し増やす */
+}
+.admin-login {
+  color: #007BFF;
+  font-size: 16px; /* リンクのフォントサイズを大きく */
+  text-decoration: none;
+}
+.admin-login:hover {
+  text-decoration: underline;
+}
+.password-container {
+  position: relative;
+}
+#togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+/* スマホ向け */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 40px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .login-input, .login-button {
+    font-size: 16px;
+  }
+  .admin-login {
+    font-size: 14px;
+  }
+}
