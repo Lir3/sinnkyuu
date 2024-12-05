@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 //ルート検索画面
 @Controller
 public class RoutesearchController {
@@ -38,13 +37,30 @@ public class RoutesearchController {
 			return "admincampany";
 		}
 	}
-	
+
 	//IDpass作成画面・
 	@Controller
-	public class CampanyidpassController {
-		@RequestMapping(value = "/campanyidpass")
+	public class AdminIdpassController {
+		@RequestMapping(value = "/adminidpass")
 		public String campanyidpass() {
-			return "campanyidpass";
+			return "adminidpass";
+		}
+	}
+
+	//IDpass作成画面・
+	@Controller
+	public class CreateIdpassController {
+		@RequestMapping(value = "/createidpass")
+		public String campanyidpass() {
+			return "createidpass";
+		}
+	}
+
+	@Controller
+	public class MainMenuController {
+		@RequestMapping(value = "/mainmenu")
+		public String cpaf() {
+			return "mainmenu";
 		}
 	}
 
@@ -56,23 +72,23 @@ public class RoutesearchController {
 			return "cpaf";
 		}
 	}
-	
+
 	///自転車通勤申請書画面
 	@Controller
 	public class BCAFController {
-	    @RequestMapping(value = "/bcaf")
-	    public String bcaf() {
-	        return "bcaf";
-	    }
+		@RequestMapping(value = "/bcaf")
+		public String bcaf() {
+			return "bcaf";
+		}
 	}
-	
+
 	//自転車保険加入証明書
 	@Controller
 	public class BicController {
-	    @RequestMapping(value = "/bic")
-	    public String bic() {
-	        return "bic";
-	    }
+		@RequestMapping(value = "/bic")
+		public String bic() {
+			return "bic";
+		}
 	}
 
 	//返信確認ページ（yes）
@@ -101,7 +117,7 @@ public class RoutesearchController {
 			return "mailform";
 		}
 	}
-	
+
 	//承認選択ページ
 	@Controller
 	public class ApprovalController {
