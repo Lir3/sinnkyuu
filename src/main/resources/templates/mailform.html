@@ -8,53 +8,56 @@
 </head>
 
 <body>
-	<div>
-		<p>検討の結果、〇番目の経路が承認されました</p>
-		<p>承認しない場合はその理由と、希望する番号を選択してください</p>
-		<img src="img/経路一覧.png">
-		<p>定期券賃金</p>
-		<table id="table1" border="1" name="table1">
-			<tr>
-				<th width="100">1ケ月</th>
-				<th width="260">30,000円</th>
-			</tr>
-			<tr>
-				<th width="100">2ケ月</th>
-				<th width="260">85,000円</th>
-			</tr>
-			<tr>
-				<th width="100">6ケ月</th>
-				<th width="260">170,000円</th>
-			</tr>
-		</table>
-		<br>
+	<div class="container">
+		<h1>承認選択ページ</h1>
+		<form>
+			<p>検討の結果、〇番目の経路が承認されました。</p>
+			<p>承認しない場合はその理由と、希望する番号を選択してください。</p>
 
-		<div>
-			<input type="radio" id="yes" name="yes" value="yes" checked />
-			<label for="yes">承認する</label>
-		</div>
+			<img src="img/経路一覧.png">
 
-		<div>
-			<input type="radio" id="no" name="no" value="no" >
-			<label for="no">承認しない</label>
-		</div>
-		<br>
-		<a>承認できない理由（150字）</a>
-		<div>
-			<textarea name="textbox1" rows="5" cols="50" maxlength="150" placeholder="理由（150字）"></textarea>
-		</div><br>
-		<p>希望する番号</p>
-		<div class="pulldown">
-		<select name="pref">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">無し</option>
-		</select>
-		</div><br>
-		<div class="example">
-			<input type="submit" style="width:70px;height:30px;" value="送信">
-		</div>
+			<br>
+
+			<a href="http://localhost:8080/routesearch" target="_blank">ルートを検索する</a>
+			
+			<br>
+			<br>
+
+			<div>
+				<label for="ynselection">承認する</label>
+				<input type="radio" id="ynselection" name="ynselection" value="yes" checked />
+			</div>
+
+			<div>
+				<label for="yes">承認しない</label>
+				<input type="radio" id="ynselection" name="ynselection" value="no" checked />
+			</div>
+
+			<br>
+
+			<label for="reason">承認できない理由(150字)</label>
+			<div>
+				<textarea name="textbox1" rows="5" cols="50" maxlength="150" placeholder="理由（150字）"></textarea>
+			</div>
+
+			<br>
+
+			<label for="number-selection">希望する番号</label>
+			<div class="pulldown">
+				<select name="pref">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">無し</option>
+				</select>
+			</div>
+
+			<br>
+
+			<div class="example">
+				<button type="submit">送信</button>
+			</div>
+		</form>
 	</div>
 </body>
 

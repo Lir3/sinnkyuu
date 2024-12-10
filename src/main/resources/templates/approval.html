@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>承認選択</title>
-<link rel="stylesheet" href="css/approval.css">
+	<meta charset="UTF-8">
+	<title>承認選択</title>
+	<link rel="stylesheet" href="css/approval.css">
 </head>
+
 <body>
-	<div>
-		<h2>承認選択</h2>
-	<img src="../img/経路一覧.png" width="300" height="300">
-	<br>
-	<br>
-	
-	<h2>選択ルート</h2>
-	
-	  <label for="fruits">決定ルート：</label>
-    <select id="root" name="root">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-    </select>
-	
-	<p class="label">名前<br><input type="text" placeholder="名前"></p>
-	<p class="label">メールアドレス<br><input type="text" placeholder="メールアドレス"></p>
-	
-	<div class="example">
-		<input type="submit" style="width:70px;height:30px;" value="送信">
+	<div class="container">
+		<h1>承認選択</h1>
+		<form>
+			<label for="address">住所</label>
+			<p>〇〇県○○市〇〇</p>
+
+			<label for="start-station">最寄り駅</label>
+			<p>○○駅</p>
+
+			<label for="arrival-station">到着駅</label>
+			<p>○○駅</p>
+
+			<label for="arrival-station">自転車利用</label>
+			<p>希望する</p>
+
+			<label for="arrival-station">バス利用</label>
+			<p>希望しない</p>
+
+			<img src="../img/経路一覧.png">
+
+			<label for="commuterpass">定期券賃金</label>
+			<table id="table1" border="1" name="table1">
+				<tr>
+					<th width="100">1ケ月</th>
+					<th width="260">30,000円</th>
+				</tr>
+				<tr>
+					<th width="100">2ケ月</th>
+					<th width="260">85,000円</th>
+				</tr>
+				<tr>
+					<th width="100">6ケ月</th>
+					<th width="260">170,000円</th>
+				</tr>
+			</table>
+			<br>
+			<a href="http://localhost:8080/routesearch" target="_blank">ルートを検索する</a>
+			<br>
+			<br>
+
+			<h1>ルート選択</h1>
+
+			<label for="fruits">承認するルート：</label>
+			<select id="root" name="root">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+
+			<br>
+			<br>
+
+			<button type="submit">送信</button>
+			<br>
+			<button type="button" onclick="location.href='commuterpassdata'">戻る</button>
+
+		</form>
 	</div>
-</div>
 </body>
+
 </html>

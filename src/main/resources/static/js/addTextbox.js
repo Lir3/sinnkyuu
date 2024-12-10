@@ -1,5 +1,5 @@
 // 経由地店のテキストボックスを追加する
-document.getElementById("addButton").addEventListener("click", function(event) {
+document.getElementById("addvia-button").addEventListener("click", function(event) {
     event.preventDefault();
 
     const container = document.getElementById("textBoxContainer");
@@ -17,7 +17,7 @@ document.getElementById("addButton").addEventListener("click", function(event) {
 });
 
 // 最後に追加したテキストボックスを削除する
-document.getElementById("removeButton").addEventListener("click", function(event) {
+document.getElementById("removevia-button").addEventListener("click", function(event) {
     event.preventDefault();
 
     const container = document.getElementById("textBoxContainer");

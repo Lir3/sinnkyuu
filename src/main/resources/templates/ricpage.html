@@ -3,13 +3,13 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>住居・身上確認</title>
+	<title>住居・身上確認書</title>
 	<link rel="stylesheet" href="css/ricpage.css">
 </head>
 
 <body>
 	<div class="container">
-		<h1>住居・身上確認</h1>
+		<h1>住居・身上確認書</h1>
 		<form>
 			<label for="name">氏名</label>
 			<input type="text" id="name" size="45">
@@ -34,13 +34,13 @@
 			<label for="arrival-station">到着駅</label>
 			<input type="text" id="arrival-station" size="45">
 
-			<div class="kari">
-				<a>ルートを検索する</a>
+			<div class="routesearch-link">
+				<a href="http://localhost:8080/routesearch" target="_blank">ルートを検索する</a>
 			</div>
 
 			<br>
 
-			<div>
+			<div class="bicycle-condition">
 				<label>最寄り駅までの自転車の利用希望</label>
 				<div class="toggle_button">
 					<input id="toggle" class="toggle_input" type='checkbox' />
@@ -59,10 +59,12 @@
 			<br>
 			<br>
 
-			<label for="arrival-station">最寄り駅までのバスの利用希望</label>
-			<div class="toggle_button">
-				<input id="toggle" class="toggle_input" type='checkbox' />
-				<label for="toggle" class="toggle_label" />
+			<div class="buss-condition">
+				<label for="arrival-station">最寄り駅までのバスの利用希望</label>
+				<div class="toggle_button">
+					<input id="toggle" class="toggle_input" type='checkbox' />
+					<label for="toggle" class="toggle_label" />
+				</div>
 			</div>
 
 			<br>

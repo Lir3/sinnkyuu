@@ -20,21 +20,14 @@ public class RoutesearchController {
 		}
 	}
 
+	/*----管理者向け----*/
+
 	//管理者ログイン画面
 	@Controller
 	public class AdminloginController {
 		@RequestMapping(value = "/adminlogin")
 		public String campanylogin() {
 			return "adminlogin";
-		}
-	}
-
-	//会社管理者ログイン画面
-	@Controller
-	public class AdmincampanyController {
-		@RequestMapping(value = "/admincampany")
-		public String campanycampany() {
-			return "admincampany";
 		}
 	}
 
@@ -56,65 +49,29 @@ public class RoutesearchController {
 		}
 	}
 
+	//定期券代申請一覧
 	@Controller
-	public class MainMenuController {
-		@RequestMapping(value = "/mainmenu")
-		public String cpaf() {
-			return "mainmenu";
+	public class CommuterPassDataController {
+		@RequestMapping(value = "/commuterpassdata")
+		public String routesearch() {
+			return "commuterpassdata";
 		}
 	}
 
-	//定期代申請書画面
+	//自転車申請一覧
 	@Controller
-	public class CPAFController {
-		@RequestMapping(value = "/cpaf")
-		public String cpaf() {
-			return "cpaf";
+	public class BicDataController {
+		@RequestMapping(value = "/bicdata")
+		public String routesearch() {
+			return "bicdata";
 		}
 	}
 
-	///自転車通勤申請書画面
 	@Controller
-	public class BCAFController {
-		@RequestMapping(value = "/bcaf")
-		public String bcaf() {
-			return "bcaf";
-		}
-	}
-
-	//自転車保険加入証明書
-	@Controller
-	public class BicController {
-		@RequestMapping(value = "/bic")
-		public String bic() {
-			return "bic";
-		}
-	}
-
-	//返信確認ページ（yes）
-	@Controller
-	public class CrpageYController {
-		@RequestMapping(value = "/crpagey")
-		public String crpagey() {
-			return "crpagey";
-		}
-	}
-
-	//返信確認ページ（no）
-	@Controller
-	public class CrpageNController {
-		@RequestMapping(value = "/crpagen")
-		public String crpagen() {
-			return "crpagen";
-		}
-	}
-
-	//メール承認フォームページ
-	@Controller
-	public class MailformController {
-		@RequestMapping(value = "/mailform")
-		public String mailform() {
-			return "mailform";
+	public class RicDataController {
+		@RequestMapping(value = "/ricdata")
+		public String routesearch() {
+			return "ricdata";
 		}
 	}
 
@@ -127,6 +84,35 @@ public class RoutesearchController {
 		}
 	}
 
+	//返信確認ページ（yes）
+	@Controller
+	public class RepelyCommuterPassYController {
+		@RequestMapping(value = "/replycpy")
+		public String crpagey() {
+			return "replycpy";
+		}
+	}
+
+	//返信確認ページ（no）
+	@Controller
+	public class RepelyCommuterPassNController {
+		@RequestMapping(value = "/replycpn")
+		public String crpagen() {
+			return "replycpn";
+		}
+	}
+
+	/*----社員向け----*/
+
+	//ダッシュボード(社員用)
+	@Controller
+	public class MainMenuController {
+		@RequestMapping(value = "/mainmenu")
+		public String cpaf() {
+			return "mainmenu";
+		}
+	}
+
 	//住居・身上確認
 	@Controller
 	public class RicpageController {
@@ -136,23 +122,40 @@ public class RoutesearchController {
 		}
 	}
 
-	//定期券代申請書一覧
+	//定期代申請書画面
 	@Controller
-	public class CRdataController {
-		@RequestMapping(value = "/crdata")
-		public String routesearch() {
-			return "crdata";
+	public class CommuterPassController {
+		@RequestMapping(value = "/commuterpass")
+		public String cpaf() {
+			return "commuterpass";
 		}
 	}
 
-	//返信確認一覧
+	///自転車通勤申請書画面
 	@Controller
-	public class ReplyController {
-		@RequestMapping(value = "/reply")
-		public String routesearch() {
-			return "reply";
+	public class BicycleApplicationFormController {
+		@RequestMapping(value = "/bicappform")
+		public String bcaf() {
+			return "bicappform";
 		}
+	}
 
+	//自転車保険加入証明書
+	@Controller
+	public class BicycleInsuranceController {
+		@RequestMapping(value = "/bicinsurance")
+		public String bic() {
+			return "bicinsurance";
+		}
+	}
+
+	//メール承認フォームページ
+	@Controller
+	public class MailformController {
+		@RequestMapping(value = "/mailform")
+		public String mailform() {
+			return "mailform";
+		}
 	}
 
 }

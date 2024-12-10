@@ -53,7 +53,13 @@ button[type="submit"] {
 	color: blue;
 }
 
-.kari {
+.bicycle-condition,
+.buss-condition{
+	display: flex;
+	
+}
+
+.routesearch-link {
 	text-align: right;
 }
 
