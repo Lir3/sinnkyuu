@@ -158,4 +158,20 @@ public class RoutesearchController {
 		}
 	}
 
+	@Controller
+	public class AdminDashBoardController {
+		@RequestMapping(value = "/admindashboard")
+		public String campanylogin() {
+			return "admindashboard";
+		}
+	}
+
+	@Controller
+	public class GeneralDashBoard1000Controller {
+		@RequestMapping(value = "/generaldashboard")
+		public String campanylogin() {
+			return "generaldashboard";
+		}
+	}
+
 }
