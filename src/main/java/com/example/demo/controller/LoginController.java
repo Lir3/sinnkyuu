@@ -18,7 +18,7 @@ public class LoginController {
 	@GetMapping("/campanylogin")
 	public String showLoginForm(Model model) {
 		// エラーメッセージを初期表示で渡さない
-		return "campanylogin"; // campanylogin.html を表示
+		return "campanylogin"; 
 	}
 
 	@PostMapping("/campanylogin")

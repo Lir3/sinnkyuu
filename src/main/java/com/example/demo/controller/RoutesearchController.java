@@ -14,9 +14,9 @@ public class RoutesearchController {
 	//会社ログイン画面
 	@Controller
 	public class CampanyloginController {
-		@RequestMapping(value = "/campanylogin")
+		@RequestMapping(value = "/companylogin")
 		public String campanylogin() {
-			return "campanylogin";
+			return "companylogin";
 		}
 	}
 
@@ -171,6 +171,14 @@ public class RoutesearchController {
 		@RequestMapping(value = "/generaldashboard")
 		public String campanylogin() {
 			return "generaldashboard";
+		}
+	}
+	
+	@Controller
+	public class mapController {
+		@RequestMapping(value = "/map")
+		public String campanylogin() {
+			return "map";
 		}
 	}
 

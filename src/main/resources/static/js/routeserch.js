@@ -22,3 +22,4 @@ function swapText() {
     box1.value = box2.value;
     box2.value = temp;
 }
+
